@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reportaje — Enfocadas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reportaje">
+
+<div id="site-header" class="site-header"></div>
+
+<main>
+  <header class="wrap article-hero">
+    <span class="sticker green">Reportaje</span>
+    <h1 style="margin-top:16px;">El foso también es un lugar de trabajo</h1>
+    <p class="subtitle-font" style="font-size:1.1rem; opacity:0.85; max-width:680px;">Un vistazo a la industria del fotoperiodismo musical y a las mujeres que la documentan desde adentro.</p>
+    <div class="article-meta">
+      <span>Reportaje · Enfocadas</span>
+      <span>·</span>
+      <span>Selecciona un fragmento del texto para comentarlo</span>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <span class="placeholder-banner">Contenido de ejemplo — pendiente del reportaje real. Prueba a seleccionar texto y dejar un comentario ✎</span>
+
+    <div class="reportaje-layout">
+      <div class="article-body" data-commentable>
+        <p>Detrás de cada fotografía de concierto que circula en redes sociales hay una negociación silenciosa: acceso, tiempo, seguridad y, muchas veces, la pregunta de si la persona detrás de la cámara será tomada en serio antes de disparar el primer cuadro.</p>
+
+        <p>Durante décadas, el fotoperiodismo musical se construyó como un espacio predominantemente masculino, desde el diseño del equipo hasta las dinámicas del foso. Las fotógrafas que hoy documentan festivales y giras describen una y otra vez la misma escena inicial: llegar a un lugar de trabajo y notar, antes que nada, cuántas mujeres hay en la sala.</p>
+
+        <div class="intertitulo"></div>
+
+        <p>Los cambios han sido reales, aunque desiguales. Algunas agencias y publicaciones han impulsado programas de mentoría dirigidos específicamente a fotógrafas emergentes, mientras que otras siguen operando con las mismas listas de contactos de siempre. El acceso, en esta industria, rara vez se distribuye por mérito puro: se distribuye por redes.</p>
+
+        <p>Para muchas, la respuesta no ha sido esperar a que la industria cambie, sino construir sus propias redes de apoyo — grupos de mensajería, mentorías informales, recomendaciones cruzadas — que funcionan como una infraestructura paralela a la oficial.</p>
+
+        <div class="intertitulo"></div>
+
+        <p>Queda pendiente medir si estos cambios se traducen en números: cuántas fotógrafas están acreditadas en los grandes festivales, cuántas ocupan puestos editoriales donde se decide qué imagen se publica y cuál no. Esa es, en parte, la pregunta que este reportaje —y la encuesta que lo acompaña— buscan empezar a responder.</p>
+      </div>
+
+      <aside class="comments-rail" id="commentsRail"></aside>
+    </div>
+
+    <div class="wrap" style="padding:0; max-width:720px; margin:0 auto;">
+      <div class="social-bar">
+        <button class="social-btn" data-action="like">♡ <span class="count">0</span></button>
+        <button class="social-btn" data-action="repost">⟲ Repostear <span class="count">0</span></button>
+        <div class="share-menu">
+          <button class="social-btn" data-action="share-toggle">↗ Compartir</button>
+          <div class="share-dropdown">
+            <button type="button" data-share="native">Compartir…</button>
+            <button type="button" data-share="copy">Copiar enlace</button>
+            <a data-share="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            <a data-share="x" target="_blank" rel="noopener">X (Twitter)</a>
+            <a data-share="facebook" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer" class="site-footer"></div>
+<div id="search-overlay-root"></div>
+
+<script src="js/main.js"></script>
+<script src="js/partials.js"></script>
+<script>
+initSocialBar('reportaje-foso');
+initHighlightComments('reportaje');
+</script>
+</body>
+</html>

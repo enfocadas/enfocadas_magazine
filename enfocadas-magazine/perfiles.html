@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfiles — Enfocadas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="perfiles">
+
+<div id="site-header" class="site-header"></div>
+
+<main>
+  <section class="wrap page-hero">
+    <span class="eyebrow">Sección</span>
+    <h1>Perfiles</h1>
+    <p class="subtitle-font" style="max-width:600px; opacity:0.85;">Historias de fotógrafas, editoras y creadoras visuales, en formato escrito y en video.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="filter-tabs" id="filterTabs">
+      <button type="button" class="active" data-filter="all">Todos</button>
+      <button type="button" data-filter="escrito">Escritos</button>
+      <button type="button" data-filter="video">Video</button>
+    </div>
+
+    <div class="profiles-grid" id="profilesGrid">
+      <a class="card profile-card" data-type="escrito" href="perfil-faith-nguyen.html">
+        <div class="ph-placeholder">Faith Nguyen<br>(foto pendiente)</div>
+        <span class="sticker pink">Escrito</span>
+        <h3>Girls Just Get It — Faith Nguyen</h3>
+        <p>Fotógrafa de conciertos que aprendió a ocupar el foso siendo, casi siempre, la única mujer presente.</p>
+      </a>
+
+      <div class="card profile-card" data-type="video" style="opacity:0.55; pointer-events:none;">
+        <div class="ph-placeholder">Perfil en video<br>(próximamente)</div>
+        <span class="sticker lavender">Video</span>
+        <h3>Próximamente</h3>
+        <p>Estamos preparando el próximo perfil en formato audiovisual.</p>
+      </div>
+
+      <div class="card profile-card" data-type="escrito" style="opacity:0.55; pointer-events:none;">
+        <div class="ph-placeholder">Nuevo perfil<br>(próximamente)</div>
+        <span class="sticker pink">Escrito</span>
+        <h3>Próximamente</h3>
+        <p>Nuevas historias de mujeres en la fotografía, muy pronto.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer" class="site-footer"></div>
+<div id="search-overlay-root"></div>
+
+<script src="js/main.js"></script>
+<script src="js/partials.js"></script>
+<script>
+document.getElementById('filterTabs').addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-filter]');
+  if (!btn) return;
+  document.querySelectorAll('#filterTabs button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('#profilesGrid .profile-card').forEach(card => {
+    const show = filter === 'all' || card.dataset.type === filter;
+    card.style.display = show ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
